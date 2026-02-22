@@ -201,3 +201,8 @@ lib/
 | `npx convex dev` | **Required:** Syncs Convex functions (messages, edit, etc.). Keep running in a separate terminal. |
 
 > **If you see "Could not find public function for 'messages:editMessage'"** — run `npx convex dev` in a separate terminal and leave it running. It deploys your Convex functions to the backend.
+
+### Build fails with `401 Unauthorized: MissingAccessToken`
+
+Run **`npx convex dev`** once (sign in when prompted), then run **`npm run build`** again.  
+Or add **`CONVEX_DEPLOY_KEY`** to `.env.local` (from [Convex Dashboard](https://dashboard.convex.dev) → your project → Settings → Deploy Key).
